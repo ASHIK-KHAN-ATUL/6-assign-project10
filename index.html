@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-6th-assignment</title>
+    <!-- Daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        .font-lato {
+            font-family: "Lato", sans-serif;
+        }
+    </style>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'btn-primary':'#ABEF5F',
+            'nav-home': '#131313',
+            'btn-view':'#0E7A81'
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+<body class="font-lato text-black ">
+    <header class="">
+        <!-- nav section -->
+        <nav class="md:w-11/12 md:mx-auto mt-4 md:mt-9 mx-3 flex justify-between items-center">
+            <div class="navbar bg-base-100 w-full">
+                <!-- Navbar Start with Logo and Hamburger Menu -->
+                <div class="navbar-start flex items-center">
+                    <!-- Hamburger Icon for Mobile -->
+                    <div class="dropdown sm:hidden">
+                        <div tabindex="0" role="button" class="btn hover:bg-btn-view ease-in duration-300 rounded-full mr-3 btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <!-- Dropdown Menu for Mobile -->
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-green-50 rounded-box z-[1] mt-3 w-52 p-6 shadow text-nav-home font-bold text-base">
+                            <li class=" cursor-pointer  hover:bg-btn-view ease-in duration-200 hover:text-white  text-center rounded-lg ">Home</li>
+                            <li onclick="goToShop()" class=" cursor-pointer  hover:bg-btn-view ease-in duration-200 hover:text-white  text-center rounded-lg ">Shop</li>
+                            <li onclick="goToContact()" class=" cursor-pointer  hover:bg-btn-view ease-in duration-200 hover:text-white  text-center rounded-lg ">Contact</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Logo -->
+                    <div class="logo flex space-x-1 md:space-x-3 items-center ">
+                        <div class="flex items-center h-[30px] w-[30px] ">
+                            <img class="flex items-center" src="images/logo.webp" alt="Logo" class="h-8">
+                        </div>
+                        <a href="#" class="text-lg md:text-3xl font-black text-nav-home">Peddy</a>
+                    </div>
+                </div>
+        
+                <!-- Navbar Center (Main Menu) for larger screens -->
+                <div class="navbar-center hidden sm:flex text-nav-home font-bold text-base">
+                    <ul class="menu menu-horizontal space-x-4 text-base">
+                        <li class="hover:bg-btn-view ease-in duration-300 hover:text-white rounded-xl">
+                            <a href="#">Home</a>
+                        </li>
+                        <li onclick="goToShop()" class="hover:bg-btn-view ease-in duration-300 hover:text-white rounded-xl">
+                            <a href="#">Shop</a>
+                        </li>
+                        <li onclick="goToContact()" class="hover:bg-btn-view ease-in duration-300 hover:text-white rounded-xl">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Cart Icon -->
+                <div class="navbar-end flex">
+                    <div class="hover:bg-btn-view ease-in duration-300 h-10 w-10 border-2 border-btn-view flex items-center justify-center rounded-full cursor-pointer">
+                        <img class="h-5 w-5 cursor-pointer" src="https://img.icons8.com/?size=100&id=nSR7D8Yb2tjC&format=png&color=000000" alt="Cart">
+                    </div>
+                </div>
+            </div>
+        </nav>
+               
+        <!-- banner section-->
+         <section class="    text-center mt-8 md:mt-14  md:w-11/12  md:mx-auto  flex flex-col  space-y-9">
+            <!-- text -->
+            <div class=" flex flex-col space-y-4">
+                <div class=" flex flex-col space-y-4">
+                    <div class="flex space-x-4 text-center items-center justify-center font-bold">
+                        <p class="text-nav-home text-center opacity-[60%] font-semibold text-xl ">Bringing Families Together</p>
+                        <div><img class="h-5 w-5" src="https://img.icons8.com/?size=100&id=46261&format=png&color=000000" alt=""></div>
+                    </div>
+                    <h1 class="text-nav-home font-black text-3xl sm:text-5xl md:text-7xl">Your Path to Adoption <br> Starts Here</h1>
+                </div>
+                <p class="text-nav-home  text-sm sm:text-base font-medium mx-3">Pet adoption is the process of taking responsibility for a pet, usually from an animal shelter, rescue organization, <br> or another pet owner, with the intention of providing it a permanent, loving home. </p>
+            </div>
+
+            <!-- Button -->
+            <div class="flex justify-center items-center">
+                <button onclick="goToMain()" class="bg-btn-view font-bold text-white py-4 px-8 rounded-xl btn ">View More</button>
+            </div>
+
+            <!-- image -->
+            <div class="flex justify-center items-center">
+                <img class=" " src="images/pet.webp" alt="">
+            </div>
+         </section>
+    </header>
+
+    <main id="main" class="">
+        <section class="text-center mt-20 mb-10">
+            <div class="flex flex-col space-y-6">
+                <h1 class="text-4xl font-black">Adopt  Your  Best Friend</h1>
+            <p class="text-lg font-medium">People choose to adopt pets for various reasons, including companionship, emotional support, <br> or the desire to give an animal a better life.</p>
+            </div>
+        </section>  
+        
+        <!-- Category button  -->
+        <nav id="categories" class=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 container mx-auto justify-items-center gap-3  "></nav>
+
+        <!-- Best Deal for you  and Sort by price section   -->
+        <section class=" mx-5 sm:container sm:mx-auto mt-11 ">
+            <div class="flex  items-center justify-between">
+                <h1 class=" text-lg md:text-2xl font-black">Best Deal For you</h1>
+                <button class="bg-btn-view font-bold text-white py-2 px-4 md:py-4 md:px-8 rounded-xl btn " >Sort by Price</button>
+            </div>
+        </section>
+
+        <!-- Loading / spinner  -->
+        <div class="flex justify-center items-center ">
+            <span id="loading" class="loading loading-ring loading-lg text-btn-view hidden "></span>
+        </div>
+        
+
+
+
+        <section  id="card-show" class=""  >
+               <!-- pet card section -->
+         <section class="container mx-auto flex  mt-11 ">
+            <!-- div for cards -->
+             
+            <div id="card-container" class=" px-2 w-[75%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 "></div> 
+
+            <!-- div for selected pet -->
+             <div  class="w-[35%] xl:w-[25%] mr-2 gap-1 p-1  xl:gap-6 xl:p-6 border-2  rounded-[12px] "  >
+                <div id="like-img" class=" grid grid-cols-1  xl:grid-cols-2  xl:gap-3 " ></div>
+             </div>
+         </section>
+        </section>
+
+
+
+        <section class="py-20">
+            <h2 class="text-3xl font-extrabold text-center  mb-8 text-btn-view">Why Adopt a Pet & How to Give Them a Good Life</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-6">
+                <!-- Card 1 -->
+                <div class="bg-green-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-green duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Save a Life</h3>
+                    <p class="text-gray-700">By adopting, you're giving a pet a second chance at life and love. Pets from shelters need a home, and you can provide that.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-blue duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Companionship</h3>
+                    <p class="text-gray-700">Pets offer unconditional love and companionship. They are proven to reduce stress and boost happiness in humans.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-green-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-green duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Reduce Overpopulation</h3>
+                    <p class="text-gray-700">Adoption helps in controlling the overpopulation of pets, which leads to fewer animals suffering in shelters.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-blue duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Exercise & Routine</h3>
+                    <p class="text-gray-700">Pets encourage a healthier lifestyle with regular walks and routines, improving both their and your well-being.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-green-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-green duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Give Them Love</h3>
+                    <p class="text-gray-700">Providing affection, proper food, shelter, and vet care will ensure your pet lives a happy and healthy life.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-blue duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Responsibility</h3>
+                    <p class="text-gray-700">Owning a pet teaches responsibility and commitment. It's a rewarding experience that enriches both your life and theirs.</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="bg-green-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-green duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Health Benefits</h3>
+                    <p class="text-gray-700">Pets can lower blood pressure, reduce stress, and increase opportunities for physical activity and socialization.</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="bg-blue-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-neon-blue duration-300">
+                    <h3 class="text-xl font-bold text-black mb-4">Teach Compassion</h3>
+                    <p class="text-gray-700">Adopting a pet teaches compassion and empathy, especially to children, helping them grow into kinder, more caring individuals.</p>
+                </div>
+            </div>
+        </section>
+     
+    </main>   
+    
+    
+    <!-- w-[460px] flex items-center justify-center -->
+
+<!-- Open the modal using ID.showModal() method -->
+<button id="modalButton" class="btn hidden" onclick="custom.showModal()">open modal</button>
+
+<dialog id="custom" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box ">
+    <div id="modal-content"></div>
+    <div class="modal-action flex justify-center w-full">
+      <!-- Use a button with type "button" to close the modal -->
+      <button class="btn w-80 bg-btn-view text-white " onclick="document.getElementById('custom').close()">Close</button>
+    </div>
+  </div>
+</dialog>
+
+
+
+    <footer  class="text-white">
+
+        <section id="contact-sec" class=" mt-16 bg-black    p-10  xl:px-44  xl:py-28  grid  grid-cols-1 sm::grid-cols-3     md:grid-cols-3   justify-items-center">
+            <!-- div num  1 -->
+            <div class=" flex flex-col gap-6"> 
+                <div class="logo flex space-x-1 md:space-x-3 items-center     ">
+                    <div class="flex items-center"><img src="images/logo.webp" alt=""></div>
+                    <p class=" text-lg md:text-3xl font-black text-white ">Peddy</p>
+                </div>
+                <div class=" flex flex-col gap-4 text-base font-medium">
+                    <p>Location: Millpara Kushtia</p>
+                    <p>M.m.c. road</p>
+                    <p>Phone: 01841065033</p>
+                    <p>Email: ashikkhan693693@gmail.com</p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <p>Openings Hours: 9.00AM-5.00PM</p>
+                    <div class=" flex space-x-5">
+                        <div  class="cursor-pointer h-9 w-9"> <a href="https://www.facebook.com/atul.khan.7568596">  <img class="h-full w-full object-cover" src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt=""> </a> </div>
+                        <div class="cursor-pointer h-9 w-9"><img class="h-full w-full object-cover"  src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=FFFFFF" alt=""></div>
+                        <div class="cursor-pointer h-9 w-9"><img class="h-full w-full object-cover"  src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt=""></div>
+                        <div class="cursor-pointer h-9 w-9"> <a href="https://www.instagram.com/ash_ik__khan/"><img class="h-full w-full object-cover"  src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" alt=""> </a> </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- div num 2 -->
+            <div class="flex flex-col gap-8 mt-14 md:mt-0">
+                <div>
+                    <h1 class=" font-bold text-lg">Useful link</h1>
+                </div>
+                <div>
+                    <ul class="text-gray-400 grid grid-cols-2 md:grid-cols-1 gap-5">
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Animals</li>
+                        <li>Foundation</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- div num 3 -->
+            <div class="flex flex-col gap-8 mt-14 md:mt-0">
+                <div>
+                    <h1 class="font-bold text-lg">Drop a Message</h1>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <input class="p-4 w-[240px] bg-gray-900 rounded-xl" type="email" name="" placeholder="Enter your email" id="">
+                    </div>
+                    <div class="w-full">
+                        <button class="btn w-[240px] bg-btn-view ">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+
+
+
+    <script src="js/pet.js"></script>
+</body>
+</html>
